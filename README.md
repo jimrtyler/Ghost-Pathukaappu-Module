@@ -69,7 +69,9 @@ Ghost **16 Windows வலுப்படுத்தல் செயல்பா
 ### பாதுகாப்பு மதிப்பீடு
 ```powershell
 # Ghost தொகுதியை ஏற்றவும்
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # தற்போதைய பாதுகாப்பு நிலையை சரிபார்க்கவும்
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### விருப்பம் 1: நேரடி பதிவிறக்கம் (சோதனை)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### விருப்பம் 2: தொகுதி நிறுவல்
